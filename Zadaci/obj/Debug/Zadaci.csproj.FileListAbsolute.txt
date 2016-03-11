@@ -1,0 +1,10 @@
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\bin\Zadaci.dll.config
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\bin\Zadaci.dll
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\bin\Zadaci.pdb
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\bin\Elmah.dll
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\bin\EntityFramework.dll
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\bin\EntityFramework.SqlServer.dll
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\bin\EntityFramework.xml
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\bin\EntityFramework.SqlServer.xml
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\obj\Debug\Zadaci.dll
+D:\Web\NearestAutoRepairWebClient\Zadaci\Zadaci\obj\Debug\Zadaci.pdb

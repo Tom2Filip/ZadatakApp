@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZadaciDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Zadaci">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Start" Type="datetime" Nullable="false" />
+    <Property Name="Naslov" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="300" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Kraj" Type="datetime" />
+  </EntityType>
+  <Function Name="InsertZadatak" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Start" Type="datetime" Mode="In" />
+    <Parameter Name="Naslov" Type="nvarchar" Mode="In" />
+    <Parameter Name="Opis" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+    <Parameter Name="Kraj" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="ZadaciDBModelStoreContainer">
+    <EntitySet Name="Zadaci" EntityType="Self.Zadaci" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
