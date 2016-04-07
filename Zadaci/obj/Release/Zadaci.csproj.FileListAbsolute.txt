@@ -1,0 +1,11 @@
+D:\Web\Zadaci\Zadaci\bin\Zadaci.dll.config
+D:\Web\Zadaci\Zadaci\bin\Zadaci.dll
+D:\Web\Zadaci\Zadaci\bin\Zadaci.pdb
+D:\Web\Zadaci\Zadaci\bin\Elmah.dll
+D:\Web\Zadaci\Zadaci\bin\EntityFramework.dll
+D:\Web\Zadaci\Zadaci\bin\EntityFramework.SqlServer.dll
+D:\Web\Zadaci\Zadaci\bin\EntityFramework.xml
+D:\Web\Zadaci\Zadaci\bin\EntityFramework.SqlServer.xml
+D:\Web\Zadaci\Zadaci\obj\Release\Zadaci.csprojResolveAssemblyReference.cache
+D:\Web\Zadaci\Zadaci\obj\Release\Zadaci.dll
+D:\Web\Zadaci\Zadaci\obj\Release\Zadaci.pdb

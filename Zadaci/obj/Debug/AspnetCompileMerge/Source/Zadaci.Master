@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Zadaci.master.cs" Inherits="Zadaci.Zadaci" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%: Page.Title %> - Zadaci Web App</title>
+     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>    
+      <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+          
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <a runat="server" href="~/WebForm1.aspx" > <asp:Literal runat="server" Text="<%$ Resources:Resource, MasterPageTitleText %>"></asp:Literal></a>
+                </p>
+            </div>
+                       
+            <div class="float-right">   
+                        
+                <div>
+                <asp:DropDownList ID="DrpLanguages" AutoPostBack="true" runat="server" Width="200px" OnSelectedIndexChanged="DrpLanguages_SelectedIndexChanged" ViewStateMode="Enabled">
+                    <asp:ListItem Text="Select Languages" Value="0"></asp:ListItem>
+                    <asp:ListItem Text="English" Value="en-GB"></asp:ListItem>
+                    <asp:ListItem Text="Hrvatski" Value="hr-HR"></asp:ListItem>                    
+                    <asp:ListItem Text="Deutsch" Value="de-DE"></asp:ListItem>
+                  </asp:DropDownList>
+            </div>
+
+
+                        
+                <div>
+                <nav>
+                    <ul id="menu">
+                        <li><a runat="server" href="~/WebForm1.aspx"><asp:Literal runat="server" Text="<%$ Resources:Resource, MasterPageLinkPocetna %>"></asp:Literal></a></li>
+                        <li><a runat="server"><asp:Literal runat="server" Text="<%$ Resources:Resource, MasterPageLinkOnama %>"></asp:Literal></a></li>                                               
+                    </ul>
+                </nav>
+               </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="body">       
+
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+  
+      <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; <%: DateTime.Now.Year %> - Zadaci Web Application</p>
+            </div>
+        </div>
+    </footer>
+</form>
+</body>
+</html>

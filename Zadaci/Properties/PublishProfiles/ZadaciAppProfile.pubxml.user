@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\www\ZadaciApp</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_GlobalResources/Resource.en-GB.resx">
+      <publishTime>03/13/2016 20:23:13</publishTime>
+    </File>
+    <File Include="App_GlobalResources/Resource.resx">
+      <publishTime>03/13/2016 20:21:57</publishTime>
+    </File>
+    <File Include="App_Readme/Elmah.txt">
+      <publishTime>03/09/2016 00:56:43</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>03/16/2016 21:50:45</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>03/16/2016 21:50:45</publishTime>
+    </File>
+    <File Include="bin/App_GlobalResources.compiled">
+      <publishTime>03/16/2016 21:50:44</publishTime>
+    </File>
+    <File Include="bin/App_GlobalResources.dll">
+      <publishTime>03/16/2016 21:50:44</publishTime>
+    </File>
+    <File Include="bin/Elmah.dll">
+      <publishTime>03/09/2016 00:56:40</publishTime>
+    </File>
+    <File Include="bin/en-GB/App_GlobalResources.resources.dll">
+      <publishTime>03/16/2016 21:50:43</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/07/2016 23:00:16</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/07/2016 23:00:16</publishTime>
+    </File>
+    <File Include="bin/Zadaci.dll">
+      <publishTime>03/17/2016 13:11:20</publishTime>
+    </File>
+    <File Include="bin/Zadaci.pdb">
+      <publishTime>03/16/2016 21:50:31</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>03/16/2016 22:36:29</publishTime>
+    </File>
+    <File Include="ErrorPages/DefaultRedirectErrorPage.aspx">
+      <publishTime>03/13/2016 20:27:28</publishTime>
+    </File>
+    <File Include="ErrorPages/Http404ErrorPage.aspx">
+      <publishTime>03/13/2016 20:27:17</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/07/2016 22:48:33</publishTime>
+    </File>
+    <File Include="Images/calendar_icon.png">
+      <publishTime>03/08/2016 14:33:57</publishTime>
+    </File>
+    <File Include="Images/calendar_icon2.png">
+      <publishTime>03/09/2016 16:27:43</publishTime>
+    </File>
+    <File Include="Images/Flags/Croatia.jpg">
+      <publishTime>03/11/2016 12:59:39</publishTime>
+    </File>
+    <File Include="Images/Flags/Germany.jpg">
+      <publishTime>03/11/2016 12:59:39</publishTime>
+    </File>
+    <File Include="Images/Flags/United_Kingdom.jpg">
+      <publishTime>03/11/2016 12:59:39</publishTime>
+    </File>
+    <File Include="Models/ZadaciDBModel.edmx.diagram">
+      <publishTime>03/07/2016 23:23:40</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/09/2016 00:56:43</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>03/16/2016 21:50:36</publishTime>
+    </File>
+    <File Include="skripteZaBazuPodataka/ELMAH-1.2-db-SQLServer.sql">
+      <publishTime>03/11/2016 20:47:32</publishTime>
+    </File>
+    <File Include="skripteZaBazuPodataka/InsertZadatak_sp.sql">
+      <publishTime>03/11/2016 20:50:37</publishTime>
+    </File>
+    <File Include="skripteZaBazuPodataka/TablicaZadaciCreate.sql">
+      <publishTime>03/11/2016 20:51:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/16/2016 19:15:08</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>03/14/2016 13:11:36</publishTime>
+    </File>
+    <File Include="Zadaci.Master">
+      <publishTime>03/13/2016 16:34:13</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

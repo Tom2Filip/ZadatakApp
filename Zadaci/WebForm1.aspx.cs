@@ -15,6 +15,12 @@ namespace Zadaci
     public partial class WebForm1 : BaseClass //System.Web.UI.Page
     {
 
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            DodajZadatakDetailsView.EnableDynamicData(typeof(ZadatakMetaData));
+        }
+        
+        /*
         protected void btn_Click2(object sender, EventArgs e)
         {
             ImageButton btn = (ImageButton)sender;
@@ -31,7 +37,15 @@ namespace Zadaci
                     break;                                    
             }
         }
-        
+        */
+
+        /*
+        protected void DrpLanguages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["Culture"] = DrpLanguages.SelectedValue;
+            Response.Redirect(Request.RawUrl);
+        }
+        */        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -41,6 +55,12 @@ namespace Zadaci
                 BindGridViewZadaci();
                 btnZavrsi.Enabled = false;
                 LoadTimeDropDownList();
+                /*
+                if (Session["Culture"] != null)
+                {
+                    DrpLanguages.Text = Session["Culture"].ToString();    
+                } 
+                */
             }
         }
 
@@ -61,21 +81,29 @@ namespace Zadaci
             {
                 lblErrorMessage.Text = (string)GetGlobalResourceObject("Resource", "greskaPriDohvatuPodataka");
             }
-            catch (System.Data.SqlClient.SqlException)
+            catch (System.Data.SqlClient.SqlException sqlEx)
             {
-                lblErrorMessage.Text = (string)GetGlobalResourceObject("Resource", "greskaPriDohvatuPodataka");
+                lblErrorMessage.Text = "SqlException" + sqlEx.Message;  //(string)GetGlobalResourceObject("Resource", "greskaPriDohvatuPodataka");
+                if (sqlEx.InnerException!=null)
+                {
+                   lblErrorMessage.Text = "SqlException " + sqlEx.Message + " " + sqlEx.InnerException.Message; 
+                }
             }
-            catch (EntityException)
+            catch (EntityException entEx)
             {
-                lblErrorMessage.Text = (string)GetGlobalResourceObject("Resource", "greskaPriDohvatuPodataka");
+                lblErrorMessage.Text = "EntityException" + entEx.Message; //(string)GetGlobalResourceObject("Resource", "greskaPriDohvatuPodataka");
+                if (entEx.InnerException != null)
+                {
+                    lblErrorMessage.Text = "EntityException " + entEx.Message + " " + entEx.InnerException.Message;
+                }
             }
-            catch (DataException)
+            catch (DataException dEx)
             {
-                lblErrorMessage.Text = (string)GetGlobalResourceObject("Resource", "greskaPriDohvatuPodataka");
+                lblErrorMessage.Text = "DataException" + dEx.Message; //(string)GetGlobalResourceObject("Resource", "greskaPriDohvatuPodataka");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                lblErrorMessage.Text = (string)GetGlobalResourceObject("Resource", "Greska");
+                lblErrorMessage.Text = ex.Message; //(string)GetGlobalResourceObject("Resource", "Greska");
             }
         }
 
@@ -204,6 +232,7 @@ namespace Zadaci
         protected void DodajZadatakDetailsView_ItemInserting(object sender, DetailsViewInsertEventArgs e)
         {
             string naslov = e.Values["Naslov"].ToString().Trim();
+            string opis2 = string.Empty;
 
             try
             {
@@ -219,15 +248,16 @@ namespace Zadaci
                     double minutes = Convert.ToDouble(ddlMinutes.SelectedValue);
                     DateTime datumStart = Convert.ToDateTime(e.Values["Start"]).AddHours(hours).AddMinutes(minutes);
 
-                    string opis = "";
+                   // string opis = "";
 
                     if (!String.IsNullOrEmpty((string)e.Values["Opis"]))
                     {
-                        opis = e.Values["Opis"].ToString();
+                       // opis = e.Values["Opis"].ToString();
+                        opis2 = e.Values["Opis"].ToString();
                     }
 
                     ZadaciDBEntities context = new ZadaciDBEntities();
-                    context.InsertZadatak(datumStart, naslov, opis, false, null);
+                    context.InsertZadatak(datumStart, naslov, opis2, false, null);
 
                     Response.Redirect("~/WebForm1.aspx");
                 }

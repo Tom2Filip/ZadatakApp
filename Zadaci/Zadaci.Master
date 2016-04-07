@@ -18,9 +18,28 @@
                     <a runat="server" href="~/WebForm1.aspx" > <asp:Literal runat="server" Text="<%$ Resources:Resource, MasterPageTitleText %>"></asp:Literal></a>
                 </p>
             </div>
-                       
+                   
+            
+            <div class="float-right">
+            <asp:ImageButton id="imagebuttonEnglish" runat="server" Height="17px" Width="20px" AlternateText="<%$ Resources:Resource, imgButtonUKText %>" ImageUrl="Images/Flags/United_Kingdom.jpg" OnClick="flag_Click" />
+            <asp:ImageButton id="imagebuttonHrvatski" runat="server" Height="17px" Width="20px" AlternateText="<%$ Resources:Resource, imgButtonCroatiaText %>" ImageUrl="Images/Flags/Croatia.jpg" OnClick="flag_Click"/>
+            </div>
+            
+                
             <div class="float-right">   
-                                
+                 
+               <%--       
+                <div>
+                <asp:DropDownList ID="DrpLanguages" AutoPostBack="true" runat="server" Width="200px" OnSelectedIndexChanged="DrpLanguages_SelectedIndexChanged" ViewStateMode="Enabled">
+                    <asp:ListItem Text="Select Languages" Value="0"></asp:ListItem>
+                    <asp:ListItem Text="English" Value="en-GB"></asp:ListItem>
+                    <asp:ListItem Text="Hrvatski" Value="hr-HR"></asp:ListItem>                    
+                    <asp:ListItem Text="Deutsch" Value="de-DE"></asp:ListItem>
+                  </asp:DropDownList>
+            </div>
+                --%>
+
+                        
                 <div>
                 <nav>
                     <ul id="menu">

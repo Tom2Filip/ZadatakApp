@@ -9,5 +9,6 @@ CREATE PROCEDURE [dbo].[InsertZadatak]
 )
 AS
 Begin
-insert into Zadaci(Start, Naslov, Opis, Status,Kraj)values(@Start, @Naslov, @Opis, @Status, @Kraj)
+insert into Zadaci(Start, Naslov, Opis, Status,Kraj)
+ values(@Start, @Naslov, @Opis, @Status, @Kraj)
 END

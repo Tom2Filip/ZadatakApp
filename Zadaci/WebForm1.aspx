@@ -1,15 +1,31 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Zadaci.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Zadaci.WebForm1" %>
+﻿
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/Zadaci.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Zadaci.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div>                             
+    <div> 
+        
+        <%--                            
         <div class="float-right">
             <asp:ImageButton id="imagebuttonEnglish" runat="server" Height="17px" Width="20px" AlternateText="<%$ Resources:Resource, imgButtonUKText %>" ImageUrl="Images/Flags/United_Kingdom.jpg" OnClick="btn_Click2"/>
             <asp:ImageButton id="imagebuttonHrvatski" runat="server" Height="17px" Width="20px" AlternateText="<%$ Resources:Resource, imgButtonCroatiaText %>" ImageUrl="Images/Flags/Croatia.jpg" OnClick="btn_Click2"/>           
         </div>
+        --%>
 
         <br />
+
+        <%--
+          <div>
+                <asp:DropDownList ID="DrpLanguages" AutoPostBack="true" runat="server" Width="200px" OnSelectedIndexChanged="DrpLanguages_SelectedIndexChanged" ViewStateMode="Enabled">
+                    <asp:ListItem Text="Select Languages" Value="0"></asp:ListItem>
+                    <asp:ListItem Text="English" Value="en-GB"></asp:ListItem>
+                    <asp:ListItem Text="Hrvatski" Value="hr-HR"></asp:ListItem>                    
+                    <asp:ListItem Text="Deutsch" Value="de-DE"></asp:ListItem>
+                  </asp:DropDownList>
+            </div>
+        --%>
 
         <asp:GridView ID="zadaciGridView" runat="server" DataKeyNames="Id" AutoGenerateColumns="False" EmptyDataText="<%$ Resources:Resource, zadaciGridViewEmptyDataText %>" CellPadding="4" ForeColor="#333333"
                          GridLines="None" OnSelectedIndexChanged="zadaciGridView_SelectedIndexChanged" OnRowDeleting="zadaciGridView_RowDeleting" 
@@ -134,7 +150,8 @@
                         <asp:Label ID="Label1" runat="server" Text='<%# Bind("Start") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                                
+                
+               <%--            
                 <asp:TemplateField HeaderText="<%$ Resources:Resource, OpisHeaderText %>">
                     <EditItemTemplate>
                         <asp:TextBox ID="txtBoxOpis1" runat="server" Text='<%# Bind("Opis") %>'></asp:TextBox>
@@ -148,6 +165,9 @@
                         <asp:Label ID="lblOpis" runat="server" Text='<%# Bind("Opis") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
+               --%>
+
+                <asp:DynamicField DataField="Opis" ValidationGroup="DodajZadatakValidationGroup" />
                 
                 <asp:CommandField  UpdateText="<%$ Resources:Resource, UpdateButtonText %>" ShowEditButton="true" ValidationGroup="DodajZadatakValidationGroup" CancelText="<%$ Resources:Resource, CancelButtonText %>" />
                 <asp:CommandField InsertText="<%$ Resources:Resource, InsertButtonText %>" ShowInsertButton="True" ValidationGroup="DodajZadatakValidationGroup" CancelText="<%$ Resources:Resource, CancelButtonText %>" />

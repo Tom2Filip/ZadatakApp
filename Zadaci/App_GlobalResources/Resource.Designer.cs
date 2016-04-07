@@ -88,6 +88,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Došlo je do greške pri radu aplikacije. Probajte ponovno. Ako se greška ponavlja kontaktirajte podršku..
+        /// </summary>
+        internal static string GeneralErrorText {
+            get {
+                return ResourceManager.GetString("GeneralErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Došlo je do greške. Probajte ponovno..
         /// </summary>
         internal static string Greska {
@@ -129,6 +138,15 @@ namespace Resources {
         internal static string greskaPriUnosuPodataka {
             get {
                 return ResourceManager.GetString("greskaPriUnosuPodataka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stranica koju ste zatražili ne postoji. Probajte ponovno..
+        /// </summary>
+        internal static string Http404ErrorText {
+            get {
+                return ResourceManager.GetString("Http404ErrorText", resourceCulture);
             }
         }
         
